@@ -73,7 +73,7 @@ public class FileCustomiser {
                                 BufferedReader bufReader = new BufferedReader(new StringReader(fileToCustomiseContents));
 
                                 StringBuffer replaced = new StringBuffer();
-                                String line = null;
+                                String line;
                                 while ((line = bufReader.readLine()) != null) {
                                     replaced.append(subString(line, result[0], result[1]));
                                     replaced.append("\n");
