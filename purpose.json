@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "name": "purpose",
+      "purposes": {
+        "purposes": [
+          {
+            "name": "australia",
+            "files": {
+              "files": [
+                {
+                  "name": "purpose.properties",
+                  "values": [
+                    {
+                      "name": "CAPITAL",
+                      "value": "Canberra",
+                      "state": "replace"
+                    },
+                    {
+                      "name": "country.population",
+                      "value": "24 million",
+                      "state": "set"
+                    },
+                    {
+                      "name": "country.name",
+                      "value": "Australia",
+                      "state": "set"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "name": "greeting",
+            "files": {
+              "files": [
+                {
+                  "name": "purpose.properties",
+                  "values": [
+                    {
+                      "name": "country.greeting",
+                      "value": "In !{country.name} a typical greeting is {greeting}",
+                      "state": "set"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+  }]
+}
