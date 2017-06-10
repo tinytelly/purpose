@@ -40,7 +40,7 @@
                   "values": [
                     {
                       "name": "country.greeting",
-                      "value": "In !{country.name} a typical greeting is {greeting}",
+                      "value": "In !{country.name} people say {greeting} mate",
                       "state": "set"
                     }
                   ]

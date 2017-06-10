@@ -35,8 +35,8 @@ public class FileCustomiserTest {
         Assert.assertTrue(fileToCustomiseContents.contains("country.population=24 million"));
         Assert.assertTrue(fileToCustomiseContents.contains("country.name=Australia"));
 
-        fileCustomiser.customise(FileCustomiser.getPurposesFromCommandLine("greeting=Hello"), purposeJson.getAbsolutePath(), purposePropertiesInTest.getAbsolutePath(), purposePropertiesInTest.getAbsolutePath());
+        fileCustomiser.customise(FileCustomiser.getPurposesFromCommandLine("greeting=Gidday"), purposeJson.getAbsolutePath(), purposePropertiesInTest.getAbsolutePath(), purposePropertiesInTest.getAbsolutePath());
         fileToCustomiseContents = FileUtils.readFileToString(purposePropertiesInTest);
-        Assert.assertTrue(fileToCustomiseContents.contains("country.greeting=In Australia a typical greeting is Hello"));
+        Assert.assertTrue(fileToCustomiseContents.contains("country.greeting=In Australia people say Gidday mate"));
     }
 }
