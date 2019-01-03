@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class File {
+    public static final String DEVOPS_PROPERTIES = "devops.properties";
     private String name;
     private Set<FileValue> values = new HashSet<FileValue>();
 

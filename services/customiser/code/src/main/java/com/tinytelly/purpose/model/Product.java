@@ -8,6 +8,9 @@ public class Product {
     private Files files;
 
     public Files getFiles() {
+        if(files == null){
+            files = new Files();
+        }
         return files;
     }
 

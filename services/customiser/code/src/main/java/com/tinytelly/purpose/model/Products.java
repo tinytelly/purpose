@@ -2,6 +2,9 @@ package com.tinytelly.purpose.model;
 
 import java.util.List;
 
+/**
+ * Created by mattheww on 16/11/2016.
+ */
 public class Products {
     public List<Product> getProducts() {
         return products;

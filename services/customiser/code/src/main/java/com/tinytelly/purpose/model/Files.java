@@ -14,6 +14,14 @@ public class Files {
         this.files = files;
     }
 
+    public void addFiles(List<File> files) {
+        this.files.addAll(files);
+    }
+
+    public boolean hasFiles(){
+        return this.files.size() == 0 ? false : true;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Files{");

@@ -1,7 +1,6 @@
 package com.tinytelly.purpose.model;
 
 import com.google.common.base.Splitter;
-import com.google.common.collect.Lists;
 
 public class Purpose {
     private String name;
@@ -16,14 +15,14 @@ public class Purpose {
 
     public String getName() {
         if (hasValue()) {
-            return Splitter.on("=").trimResults().omitEmptyStrings().split(this.name).iterator().next();
+            return Splitter.on(FileValue.OVERRIDE_DELIMITER).trimResults().omitEmptyStrings().split(this.name).iterator().next();
         }
         return name;
     }
 
     public String getValue() {
         if (hasValue()) {
-            return Lists.newArrayList(Splitter.on("=").trimResults().omitEmptyStrings().split(this.name)).get(1);
+            return this.name.split(FileValue.OVERRIDE_DELIMITER, 2)[1];
         }
         return name;
     }
@@ -40,21 +39,38 @@ public class Purpose {
         this.files = files;
     }
 
+    public void addFiles(Files files) {
+        this.files.addFiles(files.getFiles());
+    }
+
     public boolean hasValue() {
-        if (this.name.contains("=")) {
+        if (this.name.contains(FileValue.OVERRIDE_DELIMITER)) {
             return true;
         }
         return false;
     }
 
+    public String getOverrideName() {
+        String[] parts = this.getValue().split(FileValue.OVERRIDE_DELIMITER);
+        return parts[0];
+    }
+
+    public String getOverrideValue() {
+        String[] parts = this.getValue().split(FileValue.OVERRIDE_DELIMITER);
+        return parts[1];
+    }
+
+    public String getPair() {
+        return getName() + FileValue.OVERRIDE_DELIMITER + getValue();
+    }
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Purpose{");
-        sb.append("name='").append(name).append('\'');
-        if (files != null) {
+        final StringBuilder sb = new StringBuilder();
+        sb.append(" '").append(name).append("\' ");
+        if(files != null) {
             sb.append(", files=").append(files);
         }
-        sb.append('}');
         return sb.toString();
     }
 }

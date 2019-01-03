@@ -1,7 +1,8 @@
+
 {
   "products": [
     {
-      "name": "purpose",
+      "name": "devops",
       "purposes": {
         "purposes": [
           {
@@ -9,7 +10,7 @@
             "files": {
               "files": [
                 {
-                  "name": "purpose.properties",
+                  "name": "devops.properties",
                   "values": [
                     {
                       "name": "CAPITAL",
@@ -19,12 +20,12 @@
                     {
                       "name": "country.population",
                       "value": "24 million",
-                      "state": "set"
+                      "state": "overwrite"
                     },
                     {
                       "name": "country.name",
                       "value": "Australia",
-                      "state": "set"
+                      "state": "overwrite"
                     }
                   ]
                 }
@@ -36,12 +37,12 @@
             "files": {
               "files": [
                 {
-                  "name": "purpose.properties",
+                  "name": "devops.properties",
                   "values": [
                     {
                       "name": "country.greeting",
                       "value": "In !{country.name} people say {greeting} mate",
-                      "state": "set"
+                      "state": "overwrite"
                     }
                   ]
                 }
@@ -50,5 +51,6 @@
           }
         ]
       }
-  }]
+    }
+  ]
 }
