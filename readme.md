@@ -1,6 +1,6 @@
 # Purpose
 
-* ### Purpose takes a file(s) and customises it based on customisations defined in [devops.json](https://github.com/tinytelly/purpose/devops.json).
+* ### Purpose takes a file(s) and customises it based on customisations defined in [devops.json](https://github.com/tinytelly/purpose/blob/master/devops.json).
 
 ### The benefit of using purpose is to reuse customisations and to write once, reuse often specific metadata often used in performing devops activities.  
 
