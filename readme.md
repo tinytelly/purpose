@@ -38,7 +38,7 @@ The reused purpose tree can be seen in the logs and will be arranged like this e
 
 Each lower level in the purpose tree is represented by a ``` - ```  
 As an example ``` ---> ``` would be a nesting that is 3 levels deep.
-Which is to say that each purpose has reused a ``` devops.purpose ``` down to 3 levels ( lots of reuse of exsiting purposes....which is the point of the purpose framework....to reuse customisations :-) 
+Which is to say that each purpose has reused a ``` devops.purpose ``` down to 3 levels ( lots of reuse of exsiting purposes....which is the point of the purpose framework.....to reuse customisations :-) 
 
 ```
 NESTED PURPOSES :
